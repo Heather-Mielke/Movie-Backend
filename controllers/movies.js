@@ -12,7 +12,7 @@ movies.get('/', (req,res) => {
 })
 
 //movie post route (add to database of movies)
-movies.post('/', (req, res) => {
+movies.post('/favorites', (req, res) => {
   Movies.create(req.body, (err, createdMovie) => {
     res.json(createdMovie)
   })
