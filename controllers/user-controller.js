@@ -14,7 +14,7 @@ require('dotenv').config()
 
 
 
-//index route - show list of all users - will not exist in final app 
+//index route - show list of all users - will not exist in final app
 user.get('/', (req, res) => {
     Users.find({}, (err, foundUsers) => {
         res.json(foundUsers)
@@ -75,7 +75,7 @@ user.put('/login', (req,res) => {
                 res.json('username and password do not match')
             }
         }
-        
+
     })
 })
 
@@ -90,7 +90,7 @@ user.put('/:id', (req,res) => {
 //delete route - delete profile
 user.delete('/:id', (req, res) => {
     Users.findByIdAndRemove(req.params.id, (err, deletedUser) => {
-        res.json(`you successfully deleted ${deletedUser.username}`)   
+        res.json(`you successfully deleted ${deletedUser.username}`)
     })
 })
 

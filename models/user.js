@@ -12,7 +12,7 @@ const userSchema = new Schema ({
   favoriteGenre: String,
   streamingProviders: String,
   favoriteMovie: String
-  
+
 
 })
 
